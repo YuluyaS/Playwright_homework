@@ -15,7 +15,7 @@ test("test1", async ({ page }) => {
   const heading = page.locator("//h2");
 
   //await page.waitForSelector("text=Моё обучение");
-  await page.waitForSelector("text=Моё обучение", { timeout: 40_000 });
+  await page.waitForSelector("text=Моё обучение", { timeout: 10_000 });
   await expect(page.locator("text=Моё обучение")).toBeVisible();
 });
 
@@ -34,7 +34,7 @@ test("test2", async ({ page }) => {
 
   //await page.waitForSelector("text=Вы ввели неправильно логин или пароль");
   await page.waitForSelector("text=Вы ввели неправильно логин или пароль", {
-    timeout: 40_000,
+    timeout: 10_000,
   });
   await expect(
     page.locator("text=Вы ввели неправильно логин или пароль")
